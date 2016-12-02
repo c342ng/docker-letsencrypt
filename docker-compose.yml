@@ -1,10 +1,13 @@
 version: '2'
 services:
   nginx_letsencrypt:
-    build: c3t3m3/letsencrypt
+    image: registry.cn-hangzhou.aliyuncs.com/c3t3m3/letsencrypt:aliyun
     ports:
       - "80:80"
+      - "443:443"
     volumes:
-      - ./data/:/letsencrypt:rw
       - ./config/sites-enabled:/etc/nginx/sites-enabled:ro
       - ./config/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./config/letsencrypt_location.conf:/etc/nginx/letsencrypt_location.conf:ro
+      - ./config/common_ssl.conf:/etc/nginx/common_ssl.conf:ro
+      - ./data/:/letsencrypt/:ro
