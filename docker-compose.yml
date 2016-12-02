@@ -1,0 +1,10 @@
+version: '2'
+services:
+  nginx_letsencrypt:
+    build: c3t3m3/letsencrypt
+    ports:
+      - "80:80"
+    volumes:
+      - ./data/:/letsencrypt:rw
+      - ./config/sites-enabled:/etc/nginx/sites-enabled:ro
+      - ./config/nginx.conf:/etc/nginx/nginx.conf:ro
