@@ -1,2 +1,2 @@
 #/bin/bash
-certbot certonly --webroot -w /letsencrypt/data/webroot -d example.com -d www.example.com -t
+certbot certonly --webroot -w /letsencrypt/webroot -d justdofun.com -d www.justdofun.com -d intra.justdofun.com -d api.justdofun.com -t

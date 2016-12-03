@@ -8,6 +8,5 @@ services:
     volumes:
       - ./config/sites-enabled:/etc/nginx/sites-enabled:ro
       - ./config/nginx.conf:/etc/nginx/nginx.conf:ro
-      - ./config/letsencrypt_location.conf:/etc/nginx/letsencrypt_location.conf:ro
-      - ./config/justdofun_com_common_ssl.conf:/etc/nginx/justdofun_com_common_ssl.conf:ro
+      - ./config/coomon/:/etc/nginx/common/:ro
       - ./data/:/letsencrypt/:rw
