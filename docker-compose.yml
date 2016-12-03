@@ -7,6 +7,7 @@ services:
       - "443:443"
     volumes:
       - ./etc/common/:/etc/nginx/common/:ro
+      - ./etc/fastcgi_params:/etc/nginx/fastcgi_params:ro
       - ./etc/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./etc/sites-enabled/:/etc/nginx/sites-enabled:ro
       - ./bin/:/letsencrypt/:ro
