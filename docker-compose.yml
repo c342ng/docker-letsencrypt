@@ -6,8 +6,9 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./config/sites-enabled:/etc/nginx/sites-enabled:ro
-      - ./config/nginx.conf:/etc/nginx/nginx.conf:ro
-      - ./config/coomon/:/etc/nginx/common/:ro
-      - ./data/:/letsencrypt/:rw
+      - ./etc/common/:/etc/nginx/common/:ro
+      - ./etc/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./etc/sites-enabled/:/etc/nginx/sites-enabled:ro
+      - ./bin/:/letsencrypt/:ro
+      - ./data/webroot/:/usr/share/nginx/html/:ro
       - /etc/letsencrypt/:/etc/letsencrypt/:rw
