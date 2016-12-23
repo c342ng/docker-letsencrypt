@@ -1,2 +1,2 @@
 #/bin/bash
-certbot certonly --webroot -w /tmp/ -d xxx.com -t
+certbot certonly --webroot -w /tmp/ -d vmiracle.com -d jira.vmiracle.com -t
