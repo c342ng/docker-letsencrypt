@@ -15,7 +15,7 @@ RUN apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 573BFD6B3D8FBC64107
 						nginx-module-image-filter \
 						nginx-module-perl \
 						nginx-module-njs \
-						nginx-module-http2 \
+						nginx-module-http_v2 \
 						gettext-base \
 	&& rm -rf /var/lib/apt/lists/*
 
