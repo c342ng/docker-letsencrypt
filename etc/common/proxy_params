@@ -1,3 +1,6 @@
-proxy_set_header X-Trace_id       $request_id;
-proxy_set_header X-Provider       nginx_front;
-proxy_set_header X-Consumer       -;
+proxy_set_header X-Forwarded-For        $proxy_add_x_forwarded_for;
+proxy_set_header proxy_host             $proxy_host;
+proxy_set_header proxy_port             $proxy_port;
+proxy_set_header X-Trace_id             $request_id;
+proxy_set_header X-Provider             $hostname;
+proxy_set_header X-Consumer             -;
