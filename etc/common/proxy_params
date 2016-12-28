@@ -1,0 +1,3 @@
+proxy_set_header X-Trace_id       $request_id;
+proxy_set_header X-Provider       nginx_front;
+proxy_set_header X-Consumer       -;
